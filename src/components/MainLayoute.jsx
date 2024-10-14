@@ -12,7 +12,7 @@ export function DefaultHeader() {
         <Navbar  >
             <NavbarBrand as={Link} href="/">
 
-                <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white text-[27px]">Booking store</span>
+                <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white text-[27px]">Apple Books</span>
             </NavbarBrand>
             <NavbarToggle />
             <NavbarCollapse>
