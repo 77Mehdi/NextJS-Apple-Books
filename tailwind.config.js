@@ -1,4 +1,5 @@
 import flowbite from "flowbite-react/tailwind";
+import { transform } from "next/dist/build/swc";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,10 +10,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      keyframes:{
+        swipper:{
+          '0%':{transform:'translateX(0)'},
+          '100%':{transform:'translateX(-100%)'}
+        }
       },
+      animation:{
+        'awipe':'swipper 20s linear infinite'
+      }
     },
   },
   plugins: [
