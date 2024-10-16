@@ -1,6 +1,29 @@
 import React from 'react'
 import AutoSliser from './AutoSliser'
 
+const SliderImage1 = [
+    { src: "/assets/images/book_01.jpg", title: "Nuclear War", author: "Rebecca Yarros" },
+    { src: "/assets/images/book_02.jpg", title: "Conviction", author: " Denise Mina" },
+    { src: "/assets/images/book_03.jpg", title: "Hillbilly Elegy", author: "Sarah J.Maas" },
+    { src: "/assets/images/book_04.jpg", title: "Harry Poter", author: "Liz Moore" },
+    { src: "/assets/images/book_05.jpg", title: "Irom Flame", author: "Tessa Bailey" },
+    { src: "/assets/images/book_06.jpg", title: "Irom Flame", author: "Tessa Bailey" },
+    { src: "/assets/images/book_07.jpg", title: "Irom Flame", author: "Tessa Bailey" },
+
+]
+
+const SliderImage2 = [
+    { src: "/assets/images/book_08.jpg", title: "Irom Flam" , author: " Tessa Bailey" },
+    { src: "/assets/images/book_09.jpg", title: "The 48 Laws of Power", author: "Robert Greene" },
+    { src: "/assets/images/book_10.jpg",title: "Irom Flame" , author: "Sarah J.Maas" },
+    { src: "/assets/images/book_11.jpg", title: "Harry Poter", author: "  Denise Mina" },
+    { src: "/assets/images/book_12.jpg",  title: "Hillbilly Elegy", author: "Tessa Bailey" },
+    { src: "/assets/images/book_13.jpg", title: "Nuclear War", author: "Rebecca Yarros " },
+    { src: "/assets/images/book_14.jpg", title: "It Starts with Us (Unabridged)", author: "Colleen Hoover" },
+
+]
+
+
 function HeroFilter() {
     return (
 
@@ -21,7 +44,10 @@ function HeroFilter() {
                         <li className=' px-4 py-2 rounded-full cursor-pointer select-none hover:bg-gray-900 hover:text-white'>Fan-Favorite Audiobooks</li>
                     </ul>
                 </div>
-                <AutoSliser/>
+
+                <AutoSliser images={SliderImage1} movementSpeed={25}/>
+                <AutoSliser images={SliderImage2} movementSpeed={40}/>
+
             </div>
         </section>
     )

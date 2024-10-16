@@ -17,7 +17,7 @@ module.exports = {
         }
       },
       animation:{
-        'awipe':'swipper 20s linear infinite'
+        'awipe':'swipper  linear infinite'
       }
     },
   },
