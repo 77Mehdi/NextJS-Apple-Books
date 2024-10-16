@@ -16,17 +16,19 @@ export function DefaultHeader() {
             </NavbarBrand>
             <NavbarToggle />
             <NavbarCollapse>
-                <NavbarLink href="#" active>
+                <NavbarLink href="/" >
                     Home
                 </NavbarLink>
-                <NavbarLink as={Link} href="#">
+                <NavbarLink as={Link} href="/about">
                     About
                 </NavbarLink>
                 <NavbarLink href="#">Services</NavbarLink>
                 <NavbarLink href="#">Pricing</NavbarLink>
                 <NavbarLink href="#">Contact</NavbarLink>
             </NavbarCollapse>
+
             <DarkThemeToggle />
+
         </Navbar>
     )
 }
@@ -39,7 +41,7 @@ export function DefaultHeader() {
 
 export function DefaultFooter() {
     return (
-        <Footer  className=" rounded-none">
+        <Footer className=" rounded-none">
             <div className="w-full">
                 <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
                     <div>
@@ -78,7 +80,7 @@ export function DefaultFooter() {
                         </FooterLinkGroup>
                     </div>
                 </div>
-                <div className="w-full px-4 py-6 sm:flex sm:items-center sm:justify-between">
+                <div className="w-full px-4 py-6 sm:flex sm:items-center sm:justify-between  border-t border-gray-600  ">
                     <FooterCopyright href="https://www.linkedin.com/in/elmehdi-elgheryb/" by="el mehdi el gheryb" year={2024} />
                     <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
 
@@ -90,7 +92,7 @@ export function DefaultFooter() {
                     </div>
                 </div>
             </div>
-           
+
         </Footer>
     )
 }

@@ -38,7 +38,7 @@ function HeroFilter() {
                     classics — with new audiobooks and ebooks added every week.
                 </p>
                 <div className=' flex justify-center'>
-                    <ul className=' flex flex-col sm:flex-row rounded-xl sm:rounded-full justify-center align-middle gap-3 text-sm bg-gray-200 p-2 '>
+                    <ul className=' flex flex-col sm:flex-row rounded-xl sm:rounded-full justify-center align-middle gap-3 text-sm bg-gray-200 p-2 dark:text-gray-900 '>
                         <li className=' px-4 py-2 rounded-full cursor-pointer select-none hover:bg-gray-900 hover:text-white'>Bestselling Audiobooks</li>
                         <li className=' px-4 py-2 rounded-full cursor-pointer select-none hover:bg-gray-900 hover:text-white'>New & Trending Ebooks</li>
                         <li className=' px-4 py-2 rounded-full cursor-pointer select-none hover:bg-gray-900 hover:text-white'>Fan-Favorite Audiobooks</li>
