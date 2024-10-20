@@ -22,7 +22,7 @@ export function DefaultHeader() {
                 <NavbarLink as={Link} href="/about">
                     About
                 </NavbarLink>
-                <NavbarLink href="#">Services</NavbarLink>
+                <NavbarLink as={Link} href="/services">Services</NavbarLink>
                 <NavbarLink href="#">Pricing</NavbarLink>
                 <NavbarLink href="#">Contact</NavbarLink>
             </NavbarCollapse>

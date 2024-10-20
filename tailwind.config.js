@@ -10,15 +10,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      keyframes:{
-        swipper:{
-          '0%':{transform:'translateX(0)'},
-          '100%':{transform:'translateX(-100%)'}
+      keyframes: {
+        swipper: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' }
         }
       },
-      animation:{
-        'awipe':'swipper  linear infinite'
-      }
+      animation: {
+        'awipe': 'swipper  linear infinite'
+      },
+      boxShadow: {
+        'custom': '4px 4px 30px 4px rgba(0, 0, 0, 0.5)',
+      },
     },
   },
   plugins: [
