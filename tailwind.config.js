@@ -22,6 +22,7 @@ module.exports = {
       boxShadow: {
         'custom': '4px 4px 30px 4px rgba(0, 0, 0, 0.5)',
       },
+     
     },
   },
   plugins: [

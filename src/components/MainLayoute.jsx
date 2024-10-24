@@ -19,8 +19,8 @@ export function DefaultHeader() {
                 <NavbarLink href="/" >
                     Home
                 </NavbarLink>
-                <NavbarLink as={Link} href="/about">
-                    About
+                <NavbarLink as={Link} href="/iphone">
+                    Iphone
                 </NavbarLink>
                 <NavbarLink as={Link} href="/services">Services</NavbarLink>
                 <NavbarLink href="#">Pricing</NavbarLink>

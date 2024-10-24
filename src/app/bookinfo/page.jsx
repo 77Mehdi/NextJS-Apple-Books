@@ -17,7 +17,7 @@ function BookInfo() {
     return (
         <>
             <section className=' dark:bg-gray-900  dark:text-white text-gray-900 '>
-                <div className="max-w-[1400px] mx-auto px-4">
+                <div className="max-w-[1000px] mx-auto px-4">
                     <div className="  hidden sm:flex justify-between items-center mb-4">
                         <h2 className="text-[24px]  font-medium">
                             <span className="text-gray-500">Preview </span> Books
@@ -30,7 +30,7 @@ function BookInfo() {
                     <div className="     border-t border-gray-300  w-full  "></div>
                 </div>
 
-                <div className=' max-w-[1400px] mx-auto px-4 '>
+                <div className=' max-w-[1000px] mx-auto px-4 '>
                     {book ? (
                         <BookDetails book={book} />
                     ) : (
