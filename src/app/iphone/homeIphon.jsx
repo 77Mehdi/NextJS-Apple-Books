@@ -1,6 +1,9 @@
 "use client"
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
+import ImageSlider from './ImageSlider ';
+import { IoIosArrowForward } from "react-icons/io";
+import Explore from './Explore';
 
 
 export default function HomeIphon() {
@@ -38,12 +41,23 @@ export default function HomeIphon() {
           muted
         />
       </div>
-      <div>
-        <h1 className="font-bold lg:text-[70px] text-gray-900 dark:text-white text-[40px] "> Get to know iPhone.</h1>
-        <div>
-           <div className=' w-[300px] h-[600px] border border-gray-400 rounded-3xl'>
-           <Image src={"/assets/images/iphone_01.png"} width={100} height={200} className=' w-[200px]'/>
-           </div>
+      <div className=' ml-12 my-24'>
+
+        <h1 className="  font-bold lg:text-[70px] text-gray-900 dark:text-white text-[30px] "> Get to know iPhone.</h1>
+
+        <div className=' mt-12  '>
+          <ImageSlider />
+        </div>
+      </div>
+
+      <div className=' bg-gray-100 dark:bg-gray-400 py-[100px] px-4 rounded-xl'>
+        <div className=' lg:flex lg:justify-between'>
+          <h1 className=' lg:text-[50px] text-[30px]  font-bold '>Explore the lineup.</h1>
+          <span className=' flex lg:mt-12 text-blue-500   font-medium cursor-pointer'>Compare all models <IoIosArrowForward className=' mt-1' /></span>
+        </div>
+
+        <div className=' mt-12  '>
+          <Explore />
         </div>
       </div>
 
