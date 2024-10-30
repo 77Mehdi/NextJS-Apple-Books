@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { data } from '../../../public/assets/data/data';
 import BookDetails from './info';
 
-// A separate component to handle book details
+
 const BookInfoContent = () => {
     const searchParams = useSearchParams();
     const [book, setBook] = useState(null);
