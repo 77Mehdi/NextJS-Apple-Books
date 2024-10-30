@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { data } from '../../../public/assets/data/data';
 import BookDetails from './info';
@@ -8,11 +8,14 @@ import BookDetails from './info';
 function BookInfo() {
 
     const searchParams = useSearchParams();
-    const id = searchParams.get('id');
+    const [book, setBook] = useState(null);
 
 
-    const book = data.find(item => item.id === parseInt(id));
-
+    useEffect(() => {
+        const id = searchParams.get('id');
+        const foundBook = data.find(item => item.id === parseInt(id));
+        setBook(foundBook);
+      }, [searchParams]);
 
     return (
         <>
