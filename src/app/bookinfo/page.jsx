@@ -5,7 +5,8 @@ import { useSearchParams } from 'next/navigation';
 import { data } from '../../../public/assets/data/data';
 import BookDetails from './info';
 
-function BookInfo() {
+// A separate component to handle book details
+const BookInfoContent = () => {
     const searchParams = useSearchParams();
     const [book, setBook] = useState(null);
 
@@ -15,6 +16,18 @@ function BookInfo() {
         setBook(foundBook);
     }, [searchParams]);
 
+    return (
+        <div className='max-w-[1000px] mx-auto px-4'>
+            {book ? (
+                <BookDetails book={book} />
+            ) : (
+                <p>Book not found.</p>
+            )}
+        </div>
+    );
+};
+
+const BookInfo = () => {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <section className='dark:bg-gray-900 dark:text-white text-gray-900'>
@@ -31,16 +44,10 @@ function BookInfo() {
                     <div className="border-t border-gray-300 w-full"></div>
                 </div>
 
-                <div className='max-w-[1000px] mx-auto px-4'>
-                    {book ? (
-                        <BookDetails book={book} />
-                    ) : (
-                        <p>Book not found.</p>
-                    )}
-                </div>
+                <BookInfoContent />
             </section>
         </Suspense>
     );
-}
+};
 
 export default BookInfo;
