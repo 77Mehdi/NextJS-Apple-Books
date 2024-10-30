@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     serverRuntimeConfig: {     
-        port: 'https://apple-books.onrender.com'
+        port: 3000
     }, 
 };
 
