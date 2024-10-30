@@ -43,7 +43,7 @@ const BookDetails = ({ book }) => {
                             <span className='flex cursor-pointer items-center border border-blue-500 rounded-md py-2 max-w-[100px] px-4 text-blue-500 bg-white hover:text-blue-700 transition-all duration-300'> <MdPlayArrow className='mr-1' />  Listen</span>
                             <div className='  flex items-center  cursor-pointer ml-4 text-blue-500'><PiUploadFill /></div>
                         </div>
-                        <p className='flex items-center text-blue-500 text-[14px] '>Also available in the <span className=' mx-1 font-medium text-blue-500'>Book Store</span> <GoArrowUpRight /></p>
+                        <p className='flex items-center text-blue-500 text-[14px] '>Also available in the <span className=' mx-1 font-medium text-blue-500 cursor-pointer'>Book Store</span> <GoArrowUpRight /></p>
                     </div>
                 </div>
                 <div className='border-t my-10  border-gray-300'></div>

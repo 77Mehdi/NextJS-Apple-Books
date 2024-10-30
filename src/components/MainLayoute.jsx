@@ -9,22 +9,17 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsLinkedin, BsTwitter } 
 
 export function DefaultHeader() {
     return (
-        <Navbar  >
+        <Navbar  className="border-b border-gray-300" >
             <NavbarBrand as={Link} href="/">
 
                 <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white text-[27px]">Apple Books</span>
             </NavbarBrand>
             <NavbarToggle />
             <NavbarCollapse>
-                <NavbarLink href="/" >
-                    Home
-                </NavbarLink>
-                <NavbarLink as={Link} href="/iphone">
-                    Iphone
-                </NavbarLink>
+                <NavbarLink href="/" >Home</NavbarLink>
+                <NavbarLink as={Link} href="/iphone"> Iphone </NavbarLink>
                 <NavbarLink as={Link} href="/services">Services</NavbarLink>
-                <NavbarLink href="#">Pricing</NavbarLink>
-                <NavbarLink href="#">Contact</NavbarLink>
+                <NavbarLink as={Link} href="contact">Contact</NavbarLink>
             </NavbarCollapse>
 
             <DarkThemeToggle />

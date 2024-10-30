@@ -5,8 +5,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { MdContactEmergency } from "react-icons/md";
+import { IoMdContacts } from "react-icons/io";
+import { FaTruck } from "react-icons/fa";
+import { GiNetworkBars } from "react-icons/gi";
+import { FaPlus } from "react-icons/fa";
 
-export default function Explore() {
+
+export default function Explore({ array }) {
 
     const arry = [
         { imag: '/assets/images/iphon2.jpg', color: ['bg-red-500', 'bg-green-500', 'bg-blue-500',], titel: 'iPhone 16 Pro', name: 'The ultimate iPhone.', desc: 'From $999 or $41.62/mo. for 24 mo.**' },
@@ -15,6 +21,12 @@ export default function Explore() {
         { imag: '/assets/images/iphone5.jpg', color: ['bg-blue-500', 'bg-red-500', 'bg-pink-500', 'bg-green-500', 'bg-orange-500', 'bg-blue-500',], titel: 'iPhone SE', name: 'Serious power. Serious value.', desc: 'From $429 or $17.87/mo. for 24 mo.**' },
     ]
 
+    const arry2 = [
+        { icon: <GiNetworkBars />, title: 'Apple. Your one-stop shop for incredible ', desc: 'Get up $1000 in credit on a new iPhone with AT&T, Boost Mobile, T‑Mobile, or Verizon. ' },
+        { icon: <FaTruck />, title: 'Get flexible delivery and easy pickup.', desc: 'Choose two‑hour delivery from an Apple Store, free delivery or easy pickup options.' },
+        { icon: <IoMdContacts />, title: 'Meet your new iPhone with Personal Setup.', desc: 'Jump into online sessions with a Specialist  your iPhone and discover new features.' },
+        { icon: <MdContactEmergency />, title: 'Shop live with a Specialist.', desc: 'Let us guide you live over video and answer all of your questions.Trade‑in may be required.' },
+    ]
 
 
     return (
@@ -33,7 +45,7 @@ export default function Explore() {
                         1280: { slidesPerView: 4, spaceBetween: 20 },
                     }}
                 >
-                    {arry.map((item, index) => (
+                    {array === 'ar1' && (arry.map((item, index) => (
                         <SwiperSlide key={index}>
                             <div className='flex  flex-col items-center'>
                                 <Image src={item.imag} width={150} height={300} className='h-[300px] w-[150px] rounded-3xl' alt={item.titel} />
@@ -59,7 +71,20 @@ export default function Explore() {
                                 </div>
                             </div>
                         </SwiperSlide>
-                    ))}
+                    )))
+                    }
+                    {array === 'ar2' && (arry2.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <div className='flex pl-4 h-[42vh]   lg:h-[40vh] flex-col  bg-gray-100 rounded-2xl'>
+                                <p className='p-5 text-[60px]  ' > {item.icon}</p>
+                                <h1 className='mb-4 text-[27px] font-medium  '> {item.title} </h1>
+                                <p className=' flex  items-end font-medium '>{item.desc}</p>
+                                {index < 1 && (<button className=' p-3 bg-gray-700 text-white w-10 rounded-3xl  lg:mt-[70px] mt-6 '>< FaPlus className=' flex justify-end ' /></button>)}
+                                {index > 0 && (<button className=' p-3 bg-gray-700 text-white w-10 rounded-3xl  lg:mt-[70px] mt-6 '><IoIosArrowForward className=' flex justify-end ' /></button>)}
+                            </div>
+                        </SwiperSlide>
+                    )))
+                    }
                 </Swiper>
             </div>
 

@@ -7,8 +7,8 @@ function Hero() {
         <div>
 
 
-            <section className=" dark:bg-gray-900  dark:text-white text-gray-900">
-                <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+            <section className=" dark:bg-gray-900  dark:text-white text-gray-900 ">
+                <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-30">
                     <FaBookOpen className='mx-auto text-8xl bg-orange-400 py-3 px-4 mb-5 rounded-3xl text-white dark:bg-transparent dark:border-orange-400 dark:border' />
                     <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl">
                         Read, listen, discover.<br />

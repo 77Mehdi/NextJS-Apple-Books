@@ -17,8 +17,8 @@ function BookInfo() {
     return (
         <>
             <section className=' dark:bg-gray-900  dark:text-white text-gray-900 '>
-                <div className="max-w-[1000px] mx-auto px-4">
-                    <div className="  hidden sm:flex justify-between items-center mb-4">
+                <div className="max-w-[1000px] mx-auto px-4 ">
+                    <div className="  hidden sm:flex justify-between items-center py-12">
                         <h2 className="text-[24px]  font-medium">
                             <span className="text-gray-500">Preview </span> Books
                         </h2>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import ImageSlider from './ImageSlider ';
 import { IoIosArrowForward } from "react-icons/io";
 import Explore from './Explore';
+import FooterSection from '@/components/FooterSection';
 
 
 export default function HomeIphon() {
@@ -56,13 +57,25 @@ export default function HomeIphon() {
           <span className=' flex lg:mt-12 text-blue-500   font-medium cursor-pointer'>Compare all models <IoIosArrowForward className=' mt-1' /></span>
         </div>
 
-        <div className=' mt-12  '>
-          <Explore />
+        <div className=' mt-12 flex justify-center   '>
+          <Explore array={'ar1'} />
+        </div>
+      </div>
+
+      <div>
+        <div className=' lg:flex justify-between'>
+          <h1 className=' font-medium lg:text-[50px] text-[30px] my-5 dark:text-gray-100'>Why Apple is the best<br />
+            place to buy iPhone.
+          </h1>
+          <span className=' flex text-blue-500 lg:mt-[70px] cursor-pointer'>Shop iPhone<IoIosArrowForward className=' mt-1' /></span>
+        </div>
+        <div className=' my-[90px] flex justify-center'>
+          <Explore array={'ar2'} />
         </div>
       </div>
 
 
-
+        <FooterSection/>
     </section>
 
   )
